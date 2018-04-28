@@ -1,0 +1,20 @@
+@import '../global/_variables.scss';
+
+.weather {
+
+  &__logo {
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 165px;
+    }
+  }
+
+  &__container {
+    background: $app-background;
+    padding: 35px;
+  }
+}
