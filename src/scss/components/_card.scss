@@ -1,0 +1,77 @@
+@import '../global/_variables.scss';
+
+.card {
+  background: $card-background;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 10px 0px $box-shadow;
+  width: 250px;
+
+  &__title {
+    display: flex;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid $divider;
+    font-size: 18px;
+    color: $card-title-color;
+  }
+
+  &__temperature {
+    display: flex;
+    min-height: 140px;
+    justify-content: center;
+    align-items: center;
+    font-size: 8em;
+
+    &--cold {
+      color: $cold-temperature;
+    }
+    &--medium {
+      color: $medium-temperature;
+    }
+    &--hot {
+      color: $hot-temperature;
+    }
+
+    sup {
+      top: -0.4em;
+      font-size: 0.6em;
+    }
+  }
+
+  &__updated-at {
+    height: 40px;
+    background: $card-footer-background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $card-footer-color;
+  }
+
+  &__humidity-and-pressure {
+    background: $card-footer-background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__pressure,
+  &__humidity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 18px 32px 0;
+
+    span:first-child {
+      color: $card-footer-color;
+      font-size: 1.2em;
+    }
+
+    span:last-child {
+      color: $card-title-color;
+      font-size: 1.5em;
+    }
+  }
+}

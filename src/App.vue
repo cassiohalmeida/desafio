@@ -12,7 +12,9 @@ export default {
 
 <style lang="scss">
 @import url('normalize.css');
-
+body {
+  font-size: 62.5%;
+}
 #app {
   font-family: 'Helvetica', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

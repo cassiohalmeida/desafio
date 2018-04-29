@@ -4,9 +4,9 @@
       <img src="../assets/logo.svg" alt="Weather Logo">
     </div>
     <div class="weather__container">
-      <card></card>
-      <card></card>
-      <card></card>
+      <card :city-name="'Nuuk, GL'"></card>
+      <card :show-humidity-and-pressure="true" :city-name="'Urubici, BR'"></card>
+      <card :city-name="'Nairobi, KE'"></card>
     </div>
   </div>
 </template>
@@ -16,12 +16,6 @@ import Card from './Card.vue'
 export default {
   components: {
     Card
-  },
-  name: 'Weather',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
   }
 }
 </script>
