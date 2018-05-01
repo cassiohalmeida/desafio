@@ -23,5 +23,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media screen and (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      grid-gap: 30px;
+      height: 100vh;
+      padding: 0;
+
+      & .card:first-child {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+      }
+    }
   }
 }
