@@ -1,4 +1,5 @@
 export default {
   cards: {},
-  updatedAt: ''
+  updatedAt: '',
+  isLoading: false
 }

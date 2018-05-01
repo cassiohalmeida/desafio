@@ -1,12 +1,18 @@
 <template>
-  <div class="weather">
-    <div class="weather__logo">
-      <img src="../assets/logo.svg" alt="Weather Logo">
+  <div>
+    <div class="weather">
+      <div class="weather__logo">
+        <img src="../assets/logo.svg" alt="Weather Logo">
+      </div>
+      <div class="weather__container">
+        <card :show-humidity-and-pressure="key === 0" :card="card" v-for="(card, key) in getCards" v-bind:key="key"/>
+      </div>
     </div>
-    <div class="weather__container">
-      <card :show-humidity-and-pressure="key === 0" :card="card" v-for="(card, key) in getCards" v-bind:key="key"/>
+    <div v-if="isLoading" class="weather__block">
+      <img src="../assets/loader.svg" alt="Loading...">
     </div>
   </div>
+
 </template>
 
 <script>
@@ -17,7 +23,7 @@ export default {
     Card
   },
   computed: {
-    ...mapGetters(['getCards'])
+    ...mapGetters(['getCards', 'isLoading'])
   },
   methods: {
     ...mapActions(['getData']),

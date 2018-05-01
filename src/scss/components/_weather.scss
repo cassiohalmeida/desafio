@@ -38,4 +38,21 @@
       }
     }
   }
+
+  &__block {
+    display: flex;
+    justify-items: center;
+    align-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $card-footer-background;
+    z-index: 99999;
+
+    img {
+      margin: auto;
+    }
+  }
 }

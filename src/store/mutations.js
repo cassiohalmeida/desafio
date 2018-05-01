@@ -4,5 +4,8 @@ export default {
   },
   setUpdatedAtTime (state, payload) {
     state.updatedAt = payload
+  },
+  setIsLoading (state, payload) {
+    state.isLoading = payload
   }
 }

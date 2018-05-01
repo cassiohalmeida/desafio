@@ -12,6 +12,7 @@ export default {
       )
       return
     }
+    context.commit('setIsLoading', true)
     axios
       .get(
         'https://api.openweathermap.org/data/2.5/group?id=3445709,3421319,184745&APPID=40c5bfa2a84c28ed91bda7dc2825dfba&units=metric'
@@ -26,6 +27,7 @@ export default {
           moment().format('hh:mm:ss A')
         )
         context.commit('setUpdatedAtTime', moment().format('hh:mm:ss A'))
+        context.commit('setIsLoading', false)
       })
   }
 }
