@@ -72,6 +72,11 @@
     span:last-child {
       color: $card-title-color;
       font-size: 1.5em;
+
+      i {
+        font-style: inherit;
+        font-size: 0.85em;
+      }
     }
   }
 }

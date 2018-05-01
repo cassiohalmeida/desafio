@@ -4,22 +4,35 @@
       <img src="../assets/logo.svg" alt="Weather Logo">
     </div>
     <div class="weather__container">
-      <card :city-name="'Nuuk, GL'"></card>
-      <card :show-humidity-and-pressure="true" :city-name="'Urubici, BR'"></card>
-      <card :city-name="'Nairobi, KE'"></card>
+      <card :show-humidity-and-pressure="key === 0" :card="card" v-for="(card, key) in getCards" v-bind:key="key"/>
     </div>
   </div>
 </template>
 
 <script>
 import Card from './Card.vue'
+import { mapActions, mapGetters } from 'vuex'
 export default {
   components: {
     Card
+  },
+  computed: {
+    ...mapGetters(['getCards'])
+  },
+  methods: {
+    ...mapActions(['getData']),
+    callApi () {
+      this.getData()
+      // Call this method again after 10 minutes
+      setTimeout(this.callApi, 600000)
+    }
+  },
+  created () {
+    this.callApi()
   }
 }
 </script>
 
 <style lang="scss">
-  @import "@/scss/components/_weather.scss";
+@import '@/scss/components/_weather.scss';
 </style>

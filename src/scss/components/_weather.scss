@@ -1,12 +1,15 @@
 @import '../global/_variables.scss';
 
 .weather {
-
   &__logo {
     height: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    background: $header-background;
+    z-index: 9999;
 
     img {
       width: 165px;
@@ -15,7 +18,7 @@
 
   &__container {
     background: $app-background;
-    padding: 35px;
+    padding: 90px 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
