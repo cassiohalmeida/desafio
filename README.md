@@ -7,7 +7,7 @@
 
 ```bash
 # clone the repositorie
-git clone https://github.com/cassiohalmeida/desafio.git .
+git clone https://github.com/cassiohalmeida/desafio.git
 
 # enter in the new folder
 cd desafio
