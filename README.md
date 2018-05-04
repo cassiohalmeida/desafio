@@ -2,7 +2,7 @@
 
 > Desafio Conta Azul <br>
 > Este repositório foi criado para o desafio Conta Azul.
-> ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+> ![Image of Weather Now App](https://raw.githubusercontent.com/cassiohalmeida/desafio/master/static/appscreen.png)
 > Este repositório utiliza as seguintes ferramentas:
 
 | Lib/Framework | Version |
